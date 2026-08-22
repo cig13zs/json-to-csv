@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Json-to-csv \u2014 Flatten nested JSON arrays of objects an",
+  "name": "Json To Csv",
   "version": "1.0.0",
   "description": "Flatten nested JSON arrays of objects and export them to RFC 4180 CSV offline.",
   "icons": {
@@ -11,6 +11,6 @@
   "permissions": [],
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Json-to-csv"
+    "default_title": "Json To Csv"
   }
 }
