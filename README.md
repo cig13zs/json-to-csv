@@ -23,6 +23,8 @@
 
 Paste any JSON array or nested object. JSON to CSV recursively flattens keys and exports clean, spreadsheet-ready CSV format.
 
+Cells and headers starting with `=`, `+`, `-`, `@`, tab, or carriage return are prefixed with `'` for spreadsheet safety.
+
 ---
 
 ## Install the extension

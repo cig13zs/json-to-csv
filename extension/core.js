@@ -44,10 +44,11 @@
     const escapeCell = function (val) {
       if (val == null) return '';
       const str = String(val);
-      if (str.includes(delimiter) || str.includes('"') || str.includes('\n') || str.includes('\r')) {
-        return '"' + str.replace(/"/g, '""') + '"';
+      const safeStr = /^[=+\-@\t\r]/.test(str) ? "'" + str : str;
+      if (safeStr.includes(delimiter) || safeStr.includes('"') || safeStr.includes('\n') || safeStr.includes('\r')) {
+        return '"' + safeStr.replace(/"/g, '""') + '"';
       }
-      return str;
+      return safeStr;
     };
 
     const csvLines = [headers.map(escapeCell).join(delimiter)];
